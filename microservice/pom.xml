@@ -13,7 +13,8 @@
 
     <modules>
         <module>service-registry</module>
-        <module>inventory-service</module>
+        <module>api-gateway</module>
+        <module>stock-service</module>
     </modules>
 
 </project>

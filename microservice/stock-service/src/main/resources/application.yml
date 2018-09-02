@@ -19,9 +19,9 @@ spring:
     hibernate:
       ddl-auto: update
 
-mybatis:
-  typeAliasesPackage: com.spsolutions.grand.domain
-  mapperLocations: classpath:mappers/*.xml
+#mybatis:
+#  typeAliasesPackage: com.spsolutions.grand.domain
+#  mapperLocations: classpath:mappers/*.xml
 
 # Discovery Server Access
 eureka:

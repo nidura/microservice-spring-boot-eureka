@@ -1,0 +1,37 @@
+server:
+  port: 9900
+  ssl:
+    enabled: true
+    key-alias: tomcat
+    key-store: classpath:keystore.jks
+    key-store-password: "123456"
+
+http:
+  port: 9000
+
+#services:
+#  auth: http://localhost:9002/login
+
+zuul:
+  prefix: /api
+  routes:
+    service-registry:
+      path: /registry/**
+      url: http://localhost:9001
+    inventory-service:
+      path: /inventory/**
+      url: http://localhost:9003
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/inventory_db
+    username: root
+    password: admin
+#      url: jdbc:mysql://108.161.136.156:3306/edgevantage_aig_core
+#      username: root
+#      password: trp31234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
